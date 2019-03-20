@@ -36,6 +36,10 @@
     <item name="android:windowContentOverlay">@null</item>
     <item name="android:overlapAnchor">true</item>
 
+    <!-- Transparencies -->
+    <item name="android:windowShowWallpaper">@bool/theme_show_wallpaper</item>
+    <item name="android:windowIsTranslucent">@bool/theme_translucent</item>
+
     <item name="android:listViewStyle">@style/ListViewStyle</item>
     <item name="list_section_header_height">32dip</item>
     <item name="list_item_padding_top">7dp</item>
