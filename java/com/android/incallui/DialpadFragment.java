@@ -163,7 +163,13 @@ public class DialpadFragment extends BaseFragment<DialpadPresenter, DialpadUi>
   }
 
   public void updateColors() {
-    int textColor = InCallPresenter.getInstance().getThemeColorManager().getPrimaryColor();
+  	int textColor;
+  	// Disable dynamic digits color, for better theme compatibility
+    if (getContext().getResources().getBoolean(R.bool.config_dialpadDigitsStaticColor)) {
+    	textColor = getContext().getResources().getColor(R.color.incall_dialpad_digits_color);
+    } else {
+    	textColor = InCallPresenter.getInstance().getThemeColorManager().getPrimaryColor();
+    }
 
     if (currentTextColor == textColor) {
       return;

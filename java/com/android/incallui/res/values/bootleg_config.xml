@@ -17,4 +17,5 @@
 <resources>
   <!-- Whether to check that the proximity is unblocked before showing the incoming call UI. -->
   <bool name="config_answer_proximity_sensor_enabled">true</bool>
+  <bool name="config_dialpadDigitsStaticColor">false</bool>
 </resources>
